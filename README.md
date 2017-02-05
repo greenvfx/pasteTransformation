@@ -13,3 +13,5 @@ Currently supported transfer:
 * CornerPin2D -> Roto, RotoPaint, SplineWarp3, GridWarp3, CornerPin2D(transform_matrix ) (Supported only copying).
 
 You can paste transformation into layers. If you don't select a particular layer then a transformation goes to a Root layer.
+
+###Demo on [my channel](https://vimeo.com/202647014).
