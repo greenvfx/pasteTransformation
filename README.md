@@ -1,4 +1,4 @@
-# pasteTransformation
+# pasteTransformation for Nuke
 ###pasteTransformation is a tool for fast linking and copy transform values between nodes.
 For linking is SHIFT+V. For copying is ALT+V.
 Currently supported transfer: 
