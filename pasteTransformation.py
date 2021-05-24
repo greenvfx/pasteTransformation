@@ -466,7 +466,7 @@ def convertCornerPinToMatrix(valuesTO, valuesFROM, invert = False ):
 
     valuesTO = list(itertools.chain(*valuesTO))
     valuesFROM = list(itertools.chain(*valuesFROM))
-    print valuesTO, valuesFROM
+    #print (valuesTO, valuesFROM)
 
     matrixTo = nuke.math.Matrix4()
     matrixFrom = nuke.math.Matrix4()
@@ -635,7 +635,7 @@ def cornerPinToAnimatedMatrix(sourceNode, destNode):
         
         time = key.x
 
-        print time
+        #print (time)
         
         valuesTO = [sourceNode[knobTO].valueAt(time) for knobTO in CORNER_PIN_TO]
         valuesFROM = [sourceNode[knobFROM].valueAt(time) for knobFROM in CORNER_PIN_FROM]
