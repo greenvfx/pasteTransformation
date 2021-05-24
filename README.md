@@ -14,3 +14,5 @@ Currently supported transfer:
 You can paste transformation into layers. If you don't select a particular layer then a transformation goes to a Root layer.
 
 ###Demo on [my channel](https://vimeo.com/202647014).
+
+Supports Nuke 13.x and Python 3
