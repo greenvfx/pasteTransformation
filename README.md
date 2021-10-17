@@ -16,4 +16,5 @@ You can paste transformation into layers. If you don't select a particular layer
 ###Demo on [my channel](https://vimeo.com/202647014).
 
 Supports Nuke 13.x and Python 3
-version: 1.2
+
+version: 1.2 (20211017)
