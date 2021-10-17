@@ -45,6 +45,8 @@ import nuke.rotopaint as rp
 import _curvelib as cl
 import itertools
 
+from builtins import range
+
 # MAIN FUNCTION
 
 def pasteTransformation(link = False):
