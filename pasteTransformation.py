@@ -1,6 +1,9 @@
 '''
 name: pasteTransformation
-version: 1.0
+version: 1.3
+
+log:
+1.2 fixed Python 3 support (20211017)
 
 Vitaly Musatov 
 emails:
@@ -44,8 +47,6 @@ import nukescripts
 import nuke.rotopaint as rp
 import _curvelib as cl
 import itertools
-
-from builtins import range
 
 # MAIN FUNCTION
 
@@ -434,7 +435,7 @@ def convertAnimCurveToAnimatiomCurve(sourceAnimCurve):
     knob = nuke.WH_Knob('fake_knob')
     AnimationCurve = nuke.AnimationCurve(knob, 0, "fake_animation")
 
-    for i in xrange(sourceAnimCurve.getNumberOfKeys()):
+    for i in range(sourceAnimCurve.getNumberOfKeys()):
         time = sourceAnimCurve.getKey(i).time
         value = sourceAnimCurve.getKey(i).value
         AnimationCurve.setKey(time, value)
@@ -575,7 +576,7 @@ def cornerPinToRoto(sourceNode, destNode):
             layerName = selectedLayer[0].name
 
 
-        for index in xrange(16):
+        for index in range(16):
 
             matrixAnimCurve = layerTransform.getExtraMatrixAnimCurve(0, index)
             matrixAnimCurve.addKey(time, transformMatrix[index])
@@ -609,7 +610,7 @@ def cornerPinToGridWarp(sourceNode, destNode):
 
         transformMatrix = convertCornerPinToMatrix(valuesTO, valuesFROM, isInverted)
 
-        for index in xrange(16):
+        for index in range(16):
 
             matrixKnob.setValueAt(transformMatrix[index], time, index)
 
@@ -644,7 +645,7 @@ def cornerPinToAnimatedMatrix(sourceNode, destNode):
 
         transformMatrix = convertCornerPinToMatrix(valuesTO, valuesFROM, isInverted)
 
-        for index in xrange(16):
+        for index in range(16):
 
             matrixKnob.setValueAt(transformMatrix[index], time, index)
     
